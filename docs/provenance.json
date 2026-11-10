@@ -1,0 +1,11 @@
+{
+  "excludedUploadFiles": [
+    "src/ai/large_models/large_models/config.py"
+  ],
+  "archive": "src_ros2-main.zip",
+  "sourceContentChanges": 0,
+  "sha256": "936DCDA87FAB090F6BA6DC5415EA4483DA8172ED8A4DB659FAA0B4A2F19BAFBA",
+  "organizationDate": "2026-11-10",
+  "fileCount": 998,
+  "packageCount": 25
+}

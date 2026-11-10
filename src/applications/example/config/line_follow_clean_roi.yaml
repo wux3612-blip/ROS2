@@ -1,0 +1,7 @@
+/**:
+  ros__parameters:
+    roi:
+      x_max: 364
+      x_min: 334
+      y_max: 334
+      y_min: 304

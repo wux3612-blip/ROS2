@@ -1,0 +1,7 @@
+---
+bool success
+string message
+string red_box
+string green_box
+string yellow_box
+string blue_box

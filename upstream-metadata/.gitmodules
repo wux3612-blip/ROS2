@@ -1,0 +1,3 @@
+[submodule "src/large_models"]
+	path = src/large_models
+	url = http://192.168.11.206:3000/large_models/ros2_large_models.git

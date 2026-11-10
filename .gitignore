@@ -1,0 +1,10 @@
+# Source files preserved locally; private credentials excluded from Git.
+/
+src/ai/large_models/large_models/config.py
+/.env
+/.env.*
+/build/
+/install/
+/log/
+__pycache__/
+*.pyc

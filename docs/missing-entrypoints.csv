@@ -1,0 +1,5 @@
+"Setup","EntryPoint","MissingModule"
+"src_ros2/src/app/setup.py","ar_app","app.ar_app"
+"src_ros2/src/app/setup.py","hand_trajectory","app.hand_trajectory_node"
+"src_ros2/src/app/setup.py","hand_gesture","app.hand_gesture"
+"src_ros2/src/example/setup.py","urban_traffic","example.self_driving.urban_traffic"
