@@ -6,46 +6,56 @@ ROSOrin Pro 小车 ROS 2 资料的模块化整理副本，仓库应保持 **Priv
 
 - 25 个 ROS 包按功能分目录；原始源码、launch、参数、模型与资源内容没有修改。
 - 998 个原始文件均在本地副本保留；逐文件 SHA-256 已与 ZIP 内容比较通过。
-- 仅一份包含疑似访问密钥的配置不上传：`src/ai/large_models/large_models/config.py`。使用前从本地保留副本恢复，或自行提供等效私有配置；不要提交密钥。
+- 仅一份包含疑似访问密钥的配置不上传：`源码/大模型服务与应用/大模型基础服务/large_models/config.py`。使用前从本地保留副本恢复，或自行提供等效私有配置；不要提交密钥。
 - 大模型、网格、推理引擎等二进制资源通过 Git LFS 保存；保留原有重复资源，避免改动程序资源定位。
-- 原工作空间根文件放在 `upstream-metadata/`，包含原 `.gitmodules`、`.gitignore`、环境脚本与命令资料，供追溯，不自动应用。
+- 原工作空间根文件放在 `原始环境资料/`，包含原 `.gitmodules`、`.gitignore`、环境脚本与命令资料，供追溯，不自动应用。
+
+## 中文目录导航
+
+实际仓库目录已改为中文；各 ROS 包名称、Python 模块名与源码文件内容保持原样。
+
+- **源码/**：按功能归类的 25 个 ROS 包，外层包目录也使用中文名称。
+- **文档/**：分析报告、原始文件校验清单和审计资料。
+- **原始环境资料/**：厂商原始环境脚本、命令与工作空间配置。
+
+内部 Python 模块目录和包内 `launch`、`config` 等资源目录保留原名，以保持源码内容和包内结构。分析报告记录的是最初整理方案，当前实际路径以本页及文件清单为准。
 
 ## 模块索引
 
 | ROS 包 | 新位置 | 压缩包内原位置（src_ros2/ 下） |
 |---|---|---|
-| `large_models` | [ai/large_models](src/ai/large_models/) | `src/large_models/large_models` |
-| `large_models_examples` | [ai/large_models_examples](src/ai/large_models_examples/) | `src/large_models_examples` |
-| `app` | [applications/app](src/applications/app/) | `src/app` |
-| `example` | [applications/example](src/applications/example/) | `src/example` |
-| `navigation` | [autonomy/navigation](src/autonomy/navigation/) | `src/navigation` |
-| `slam` | [autonomy/slam](src/autonomy/slam/) | `src/slam` |
-| `sdk` | [common/sdk](src/common/sdk/) | `src/driver/sdk` |
-| `rosorin_description` | [description/rosorin_description](src/description/rosorin_description/) | `src/simulations/rosorin_description` |
-| `controller` | [drivers/controller](src/drivers/controller/) | `src/driver/controller` |
-| `ros_robot_controller` | [drivers/ros_robot_controller](src/drivers/ros_robot_controller/) | `src/driver/ros_robot_controller` |
-| `test_stand` | [experiments/test_stand](src/experiments/test_stand/) | `src/test_stand` |
-| `openclaw_controller` | [integrations/openclaw_controller](src/integrations/openclaw_controller/) | `src/openclaw_controller` |
-| `interfaces` | [interfaces/interfaces](src/interfaces/interfaces/) | `src/interfaces` |
-| `kinematics_msgs` | [interfaces/kinematics_msgs](src/interfaces/kinematics_msgs/) | `src/driver/kinematics_msgs` |
-| `large_models_msgs` | [interfaces/large_models_msgs](src/interfaces/large_models_msgs/) | `src/large_models/large_models_msgs` |
-| `ros_robot_controller_msgs` | [interfaces/ros_robot_controller_msgs](src/interfaces/ros_robot_controller_msgs/) | `src/driver/ros_robot_controller_msgs` |
-| `servo_controller_msgs` | [interfaces/servo_controller_msgs](src/interfaces/servo_controller_msgs/) | `src/driver/servo_controller_msgs` |
-| `xf_mic_asr_offline_msgs` | [interfaces/xf_mic_asr_offline_msgs](src/interfaces/xf_mic_asr_offline_msgs/) | `src/xf_mic_asr_offline_msgs` |
-| `kinematics` | [manipulation/kinematics](src/manipulation/kinematics/) | `src/driver/kinematics` |
-| `servo_controller` | [manipulation/servo_controller](src/manipulation/servo_controller/) | `src/driver/servo_controller` |
-| `multi` | [multi_robot/multi](src/multi_robot/multi/) | `src/multi` |
-| `peripherals` | [sensors/peripherals](src/sensors/peripherals/) | `src/peripherals` |
-| `xf_mic_asr_offline` | [speech/xf_mic_asr_offline](src/speech/xf_mic_asr_offline/) | `src/xf_mic_asr_offline` |
-| `bringup` | [system/bringup](src/system/bringup/) | `src/bringup` |
-| `calibration` | [tools/calibration](src/tools/calibration/) | `src/calibration` |
+| `large_models` | [大模型服务与应用/大模型基础服务](源码/大模型服务与应用/大模型基础服务/) | `src/large_models/large_models` |
+| `large_models_examples` | [大模型服务与应用/大模型应用示例](源码/大模型服务与应用/大模型应用示例/) | `src/large_models_examples` |
+| `app` | [基础应用与视觉/基础应用](源码/基础应用与视觉/基础应用/) | `src/app` |
+| `example` | [基础应用与视觉/视觉与抓取示例](源码/基础应用与视觉/视觉与抓取示例/) | `src/example` |
+| `navigation` | [自主建图与导航/自主导航](源码/自主建图与导航/自主导航/) | `src/navigation` |
+| `slam` | [自主建图与导航/地图构建](源码/自主建图与导航/地图构建/) | `src/slam` |
+| `sdk` | [公共工具/算法与辅助工具](源码/公共工具/算法与辅助工具/) | `src/driver/sdk` |
+| `rosorin_description` | [机器人模型描述/结构模型与可视化](源码/机器人模型描述/结构模型与可视化/) | `src/simulations/rosorin_description` |
+| `controller` | [底盘与控制板驱动/底盘运动控制](源码/底盘与控制板驱动/底盘运动控制/) | `src/driver/controller` |
+| `ros_robot_controller` | [底盘与控制板驱动/下位机通信控制](源码/底盘与控制板驱动/下位机通信控制/) | `src/driver/ros_robot_controller` |
+| `test_stand` | [实验与二次开发/机械臂与视觉实验](源码/实验与二次开发/机械臂与视觉实验/) | `src/test_stand` |
+| `openclaw_controller` | [综合场景集成/移动抓取与物流控制](源码/综合场景集成/移动抓取与物流控制/) | `src/openclaw_controller` |
+| `interfaces` | [消息与服务接口/通用业务接口](源码/消息与服务接口/通用业务接口/) | `src/interfaces` |
+| `kinematics_msgs` | [消息与服务接口/运动学接口](源码/消息与服务接口/运动学接口/) | `src/driver/kinematics_msgs` |
+| `large_models_msgs` | [消息与服务接口/大模型交互接口](源码/消息与服务接口/大模型交互接口/) | `src/large_models/large_models_msgs` |
+| `ros_robot_controller_msgs` | [消息与服务接口/控制板通信接口](源码/消息与服务接口/控制板通信接口/) | `src/driver/ros_robot_controller_msgs` |
+| `servo_controller_msgs` | [消息与服务接口/舵机控制接口](源码/消息与服务接口/舵机控制接口/) | `src/driver/servo_controller_msgs` |
+| `xf_mic_asr_offline_msgs` | [消息与服务接口/离线语音接口](源码/消息与服务接口/离线语音接口/) | `src/xf_mic_asr_offline_msgs` |
+| `kinematics` | [机械臂与舵机/机械臂运动学](源码/机械臂与舵机/机械臂运动学/) | `src/driver/kinematics` |
+| `servo_controller` | [机械臂与舵机/舵机与关节控制](源码/机械臂与舵机/舵机与关节控制/) | `src/driver/servo_controller` |
+| `multi` | [多机器人协同/多车导航与跟随](源码/多机器人协同/多车导航与跟随/) | `src/multi` |
+| `peripherals` | [传感器与遥控/相机雷达与遥控](源码/传感器与遥控/相机雷达与遥控/) | `src/peripherals` |
+| `xf_mic_asr_offline` | [语音交互/离线识别与语音控制](源码/语音交互/离线识别与语音控制/) | `src/xf_mic_asr_offline` |
+| `bringup` | [系统启动/整机启动与自检](源码/系统启动/整机启动与自检/) | `src/bringup` |
+| `calibration` | [标定工具/底盘与视觉标定](源码/标定工具/底盘与视觉标定/) | `src/calibration` |
 
 ## 开始阅读
 
-1. [架构与上传前问题分析](docs/analysis.md)
-2. [原路径、新路径、文件 SHA-256 与上传状态](docs/source-manifest.csv)
-3. [来源压缩包校验值](docs/provenance.json)
-4. [缺失的安装入口](docs/missing-entrypoints.csv)
+1. [架构与上传前问题分析](文档/analysis.md)
+2. [原路径、新路径、文件 SHA-256 与上传状态](文档/source-manifest.csv)
+3. [来源压缩包校验值](文档/provenance.json)
+4. [缺失的安装入口](文档/missing-entrypoints.csv)
 
 先读 `bringup` 的整机启动，再读 `controller` 的速度/里程计、`ros_robot_controller` 的下位机通信，以及 `servo_controller` 和 `kinematics` 的机械臂控制。
 
@@ -68,4 +78,5 @@ git lfs pull
 
 来源为用户本地厂商资料 `src_ros2-main.zip`；没有导入原 Git 历史。保留各包原有作者、许可证声明和 LICENSE 文件。多数包许可证仍为 TODO，未授予统一新许可证；第三方 SDK、模型和网格的再分发许可待确认。私有归档不代表已获得公开发布授权。
 
-原 `.gitmodules` 指向内网服务，作为历史资料保留在 `upstream-metadata`，当前大模型源码以普通目录纳入本仓库。
+原 `.gitmodules` 指向内网服务，作为历史资料保留在 `原始环境资料`，当前大模型源码以普通目录纳入本仓库。
+

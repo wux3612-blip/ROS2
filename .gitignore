@@ -1,6 +1,5 @@
-# Source files preserved locally; private credentials excluded from Git.
-/
-src/ai/large_models/large_models/config.py
+# Keep private credentials local; do not commit this source configuration.
+/源码/大模型服务与应用/大模型基础服务/large_models/config.py
 /.env
 /.env.*
 /build/
